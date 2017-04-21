@@ -1,0 +1,8 @@
+<h6>Server address: {{server$ | async}}</h6>
+
+<ion-list *ngIf="programs$ | async">
+	<button ion-item *ngFor="let program of programs$ | async" (click)="startProgram(program)">
+		<ion-icon name="code" item-left></ion-icon>
+		{{program}}
+	</button>
+</ion-list>
